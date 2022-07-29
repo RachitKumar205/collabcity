@@ -12,6 +12,9 @@ class Idea(models.Model):
     likes = models.IntegerField()
     dislikes = models.IntegerField()
 
+    class Meta:
+        ordering = ['-likes']
+
 class Saves(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, null=True, blank=True)
     image = models.CharField(max_length=255)
