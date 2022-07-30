@@ -62,6 +62,8 @@ ROOT_URLCONF = 'collabcity.urls'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
