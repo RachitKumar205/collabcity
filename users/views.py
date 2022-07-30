@@ -9,9 +9,3 @@ from . import serializers
 class UserListView(generics.ListAPIView):
     queryset = models.CustomUser.objects.all()
     serializer_class = serializers.UserSerializer
-
-class Object(CsrfExemptMixin, APIView):
-    authentication_classes = []
-
-    def post(self, request, format=None):
-        return Response({'received data': request.data})
